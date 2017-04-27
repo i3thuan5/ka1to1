@@ -9,7 +9,7 @@ const 頁尾 = () => {
   },
   {
     title: "Github",
-    url: "https://github.com/i3thuan5/tau3_phah4-ji7",
+    url: "https://github.com/i3thuan5/tshiat4-im1",
   },
   {
     title: "意傳文化科技",
