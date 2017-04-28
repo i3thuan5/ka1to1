@@ -1,6 +1,7 @@
 import React from 'react';
 import superagent from 'superagent-bluebird-promise';
 import {對齊結果網址} from '../../後端網址';
+import 一筆結果 from './一筆結果';
 
 import Debug from 'debug';
 var debug = Debug('tau3:對齊結果');
@@ -38,7 +39,7 @@ export default class 對齊結果 extends React.Component {
   }
 
   查怎樣講() {
-    superagent.get(對齊結果網址)
+    superagent.get(對齊結果網址())
           .then(({ body })=>(
             this.setState(body)
           ))
@@ -60,22 +61,12 @@ export default class 對齊結果 extends React.Component {
 
   render() {
     let { 對齊結果 } = this.state;
-    debug(對齊結果)
     if (對齊結果 === undefined) {
       return <div/>;
     }
 
     let 對齊漢字臺羅 = 對齊結果.slice(0, this.state.顯示幾个).map(
-      (結果, i)=>(<div>
-        第 {結果.編號} 筆 --
-        {
-          結果.狀態=='成功'?
-          <a download href={結果.壓縮檔網址}>下載切好的壓縮檔</a>:
-          結果.狀態
-        }
-        <br/>
-        <br/>
-        </div>)
+      (結果, i)=>(<一筆結果 key={i} 結果={結果}/>)
       );
 
     let { 音檔 } = this.state;
