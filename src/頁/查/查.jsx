@@ -2,12 +2,13 @@ import React from "react";
 import { MainSection } from "demo-ui";
 import PropTypes from "prop-types";
 import 對齊結果 from "../../元素/顯示/對齊結果";
+import {對齊上傳網址} from '../../後端網址';
 
 class 查 extends React.Component {
   render() {
     return (
       <MainSection>
-        <form method="post" encType="multipart/form-data" action="//localhost:8000/對齊音檔" target='_blank'>
+        <form method="post" encType="multipart/form-data" action={對齊上傳網址()} target='_blank'>
           <label htmlFor="id_文本">文本（每一行<a href='http://xn--p8s96olm5c.xn--v0qr21b.xn--kpry57d'>分詞</a>會獨立切出一個檔）：</label>
           <div>
             <textarea
