@@ -72,7 +72,7 @@ export default class 對齊結果 extends React.Component {
     let { 音檔 } = this.state;
     return (
     <div className='ui segment'>
-      <h2>對齊結果</h2>
+      <h2>處理狀況</h2>
        {對齊漢字臺羅}
        {this.看閣較濟()}
     </div>

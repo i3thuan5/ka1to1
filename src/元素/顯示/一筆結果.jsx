@@ -15,7 +15,7 @@ class 一筆結果 extends React.Component {
             <source type="audio/wav"
                src={檔案網址(結果.原始wav檔網址)}/>
           </audio>
-          <a download href={檔案網址(結果.壓縮檔網址)}>下載切好的壓縮檔</a>
+          <a download href={檔案網址(結果.壓縮檔網址)}>掠鉸好的壓縮檔</a>
         </div>
     )
     }
