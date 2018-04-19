@@ -17,8 +17,8 @@ class 查 extends React.Component {
 一-路｜tsit8-loo7"></textarea>
           </div>
           <div>
-            <label htmlFor="id_原始wav檔">原始wav檔:</label>
-            <input name="原始wav檔" id="id_原始wav檔" type="file"/>
+            <label htmlFor="id_音檔">原始wav檔:</label>
+            <input name="音檔" id="id_音檔" type="file"/>
           </div>
           <input name="語言" id="語言" value='閩南語' type="hidden"/>
           <input type="submit"/>
